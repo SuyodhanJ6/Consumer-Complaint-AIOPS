@@ -16,9 +16,13 @@ ENV PYSPARK_PYTHON=/usr/bin/python3
 ENV PYSPARK_DRIVER_PYTHON=/usr/bin/python3
 
 # Create a directory for your application and set it as the working directory
-RUN mkdir /app
-COPY . /app/
-WORKDIR /app/
+# RUN mkdir /app
+# COPY . /app/
+# WORKDIR /app/
+WORKDIR /app
+
+# Copy the contents of the current directory to the working directory in the container
+COPY . /app
 
 # Install Python dependencies from requirements.txt
 RUN pip3 install -r requirements.txt

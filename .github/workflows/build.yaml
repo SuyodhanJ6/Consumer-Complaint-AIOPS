@@ -96,9 +96,9 @@ jobs:
 
       - name: Run Docker Image
         run: |
-         docker run -d -p 80:8080 --name=my-container 112869101806.dkr.ecr.ap-south-1.amazonaws.com/consumer-complaint:latest
+         docker run -d -p 8080:8080 --name=my-container 112869101806.dkr.ecr.ap-south-1.amazonaws.com/consumer-complaint:latest
+
 
       - name: Clean previous images and containers
         run: |
          docker system prune -f
-         
